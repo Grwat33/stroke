@@ -31,10 +31,10 @@ def entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetyp
     elif worktype == "Self-employed":
         worktype = 3
 
-    if residence == "Rural":
-        worktype = 2
-    elif worktype == "Urban":
-        worktype = 1
+    if residencetype == "Rural":
+        residencetype = 2
+    elif residencetype == "Urban":
+        residencetype = 1
 
     if smokingstatus == "never":
         smokingstatus = 1
@@ -43,3 +43,4 @@ def entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetyp
     elif smokingstatus == "smokes":
         smokingstatus = 3
 
+    print(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)

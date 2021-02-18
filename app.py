@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, jsonify, request
-import retrieve
+import retrievedata
 import os
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def retrieve():
         bmi = request.form["bmi"]
         smokingstatus = request.form["smokingstatus"]
         print(gender)
-        retrieve.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
+        retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
 
 
     return redirect("/")
