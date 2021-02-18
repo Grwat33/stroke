@@ -32,6 +32,7 @@
 </head>
 
 <body>
+    <!---
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Stroke Prediction</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,18 +49,68 @@
           </ul>
         </div>
       </nav> 
+    -->
 
-
-<form>
-    <label for="gender">Gender:</label><br>
-    <input type="text" id="gender" name="gender"><br>
-    <label for="age">Age:</label><br>
-    <input type="text" id="age" name="age"><br>
-    <label for="pwd">Password:</label><br>
-    <input type="password" id="pwd" name="pwd">
-    <label for="pwd">Password:</label><br>
-    <input type="password" id="pwd" name="pwd">
-  </form>
+    <form>
+        <br>
+        <p>Welcome to our Stroke Predictor!</p>
+        <br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option text="male" selected="selected">male</option>
+            <option text="female">female</option>
+        </select>
+        <br>
+        <label for="age">Age:</label>
+        <input type="numeric" id="age" name="age">
+        <br>
+        <label for="hypertension">Do You Have Hypertension?:</label>
+        <select id="hypertension" name="hypertension">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <br>
+        <label for="heartdisease">Do You Have Heart Disease?:</label>
+        <select id="heartdisease" name="heartdisease">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <br>
+        <label for="married">Have You Ever Been Married?:</label>
+        <select id="married" name="married">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <br>
+        <label for="worktype">Work Type:</label>
+        <select id="worktype" name="worktype">
+            <option value="government">Government Job</option>
+            <option value="private">Private</option>
+            <option value="selfemployed">Self-Employed</option>
+        </select>
+        <br>
+        <label for="residencetype">Residence Type:</label>
+        <select id="residencetype" name="residencetype">
+            <option value="urban">Urban</option>
+            <option value="rural">Rural</option>
+        </select>
+        <br>
+        <label for="glucose">Average Glucose Level:</label>
+        <input type="numeric" id="glucose" name="glucose">
+        <br>
+        <label for="bmi">BMI:</label>
+        <input type="numeric" id="bmi" name="bmi">
+        <br>
+        <label for="smokingstatus">Smoking Status:</label>
+        <select id="smokingstatus" name="smokingstatus">
+            <option value="never">Never Smoked</option>
+            <option value="formerly">Formerly Smoked</option>
+            <option value="formerly">Smokes</option>
+        </select>
+        <br>
+        <br>
+        <button id="submit" class="button button1">Submit</button>
+      </form>
 
 
 </body>
