@@ -50,15 +50,14 @@
         </div>
       </nav> 
     -->
-
-    <form>
+    <form method="POST" action="/retrieve">
         <br>
         <p>Welcome to our Stroke Predictor!</p>
         <br>
         <label for="gender">Gender:</label>
         <select id="gender" name="gender">
-            <option text="male" selected="selected">male</option>
-            <option text="female">female</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
         </select>
         <br>
         <label for="age">Age:</label>
@@ -84,19 +83,16 @@
         <br>
         <label for="worktype">Work Type:</label>
         <select id="worktype" name="worktype">
-            <option value="government">Government Job</option>
-            <option value="private">Private</option>
-            <option value="selfemployed">Self-Employed</option>
+            <option value="Govt_job">Government Job</option>
+            <option value="Private">Private</option>
+            <option value="Self-employed">Self-Employed</option>
         </select>
         <br>
         <label for="residencetype">Residence Type:</label>
         <select id="residencetype" name="residencetype">
-            <option value="urban">Urban</option>
-            <option value="rural">Rural</option>
+            <option value="Urban">Urban</option>
+            <option value="Rural">Rural</option>
         </select>
-        <br>
-        <label for="glucose">Average Glucose Level:</label>
-        <input type="numeric" id="glucose" name="glucose">
         <br>
         <label for="bmi">BMI:</label>
         <input type="numeric" id="bmi" name="bmi">
@@ -105,12 +101,12 @@
         <select id="smokingstatus" name="smokingstatus">
             <option value="never">Never Smoked</option>
             <option value="formerly">Formerly Smoked</option>
-            <option value="formerly">Smokes</option>
+            <option value="smokes">Smokes</option>
         </select>
         <br>
         <br>
-        <button id="submit" class="button button1">Submit</button>
       </form>
+      <input type="submit" value="Submit">
 
 
 </body>
