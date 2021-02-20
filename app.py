@@ -6,7 +6,31 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/predictor")
+def predictor():
     return render_template("index1.html")
+
+@app.route("/graphs")
+def graphs():
+    return render_template("index2.html")
+
+@app.route("/datainfo")
+def datainfo():
+    return render_template("index3.html")
+
+@app.route("/collaborators")
+def collaborators():
+    return render_template("index4.html")
+
+@app.route("/nostroke")
+def nostroke():
+    return render_template("index5.html")
+
+@app.route("/yesstroke")
+def yesstroke():
+    return render_template("index6.html")
 
 @app.route("/retrieve", methods=['GET', 'POST'])
 def retrieve():
@@ -21,10 +45,11 @@ def retrieve():
         bmi = request.form["bmi"]
         smokingstatus = request.form["smokingstatus"]
         predictions = retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
-        print(predictions)
-
-    return redirect("/")
-
+        
+        if predictions[0]==0:
+            return redirect("/nostroke")
+        else:
+            return redirect("/yesstroke")
 
 if __name__ == '__main__':
     port = int(os.environ.get('Port', 5000))

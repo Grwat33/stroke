@@ -31,28 +31,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <!---
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Stroke Prediction</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="">predict</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">collaborators</a>
-            </li>
-          </ul>
-        </div>
-      </nav> 
-    -->
-    <form method="POST" action="/retrieve">
+<body style="background-color: pink">
+  
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Stroke Prediction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/">home</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/predictor">predict</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/graphs">graphs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/datainfo">dataset</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/collaborators">collaborators</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+    <form method="POST" action="/retrieve" style="margin-left:5%">
         <br>
-        <p>Welcome to our Stroke Predictor!</p>
+        <br>
+        <br>
+        <br>
+        <p>Please input all datafields in order to receive feedback!</p>
+        <br>
         <br>
         <label for="gender">Gender:</label>
         <select id="gender" name="gender">
@@ -107,6 +123,14 @@
         <br>
         <input type="submit" value="Submit">
       </form>
+      <br>
+      <br>
+      <br>
+      <h3>BMI For Adults Widget</h3>
+      <br>
+      <iframe src="https://www.cdc.gov/healthyweight/assessing/adult-widget/iframe.html" style="margin-left:5%"></iframe>
+      <br>
+
 
 
 
