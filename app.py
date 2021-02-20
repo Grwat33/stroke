@@ -20,9 +20,8 @@ def retrieve():
         residencetype = request.form["residencetype"]
         bmi = request.form["bmi"]
         smokingstatus = request.form["smokingstatus"]
-        print(gender)
-        retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
-
+        predictions = retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
+        print(predictions)
 
     return redirect("/")
 

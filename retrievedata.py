@@ -2,6 +2,7 @@ from splinter import Browser
 import pandas as pd
 from datetime import datetime
 import time
+import pickle
 
 def entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus):
     if gender == "male":
@@ -42,5 +43,10 @@ def entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetyp
         smokingstatus = 2
     elif smokingstatus == "smokes":
         smokingstatus = 3
+    
+    classifier = pickle.load(open("Logistic_Model.sav", "rb"))
+    df = pd.DataFrame({"Gender": [gender], "Age": [age], "Hypertension": [hypertension], "HeartDisease": [heartdisease], "EverMarried": [married], "WorkType": [worktype], "ResidenceType": [residencetype], "BMI": [bmi], "SmokingStatus": [smokingstatus]})
 
-    print(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
+    predictions = classifier.predict(df)
+
+    return predictions
