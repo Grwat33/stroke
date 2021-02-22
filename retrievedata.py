@@ -43,7 +43,7 @@ def entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetyp
         smokingstatus = 2
     elif smokingstatus == "smokes":
         smokingstatus = 3
-    
+
     classifier = pickle.load(open("Logistic_Model.sav", "rb"))
     df = pd.DataFrame({"Gender": [gender], "Age": [age], "Hypertension": [hypertension], "HeartDisease": [heartdisease], "EverMarried": [married], "WorkType": [worktype], "ResidenceType": [residencetype], "BMI": [bmi], "SmokingStatus": [smokingstatus]})
 

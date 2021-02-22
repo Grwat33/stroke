@@ -24,16 +24,17 @@ def datainfo():
 def collaborators():
     return render_template("index4.html")
 
-@app.route("/nostroke")
+@app.route("/predictor/nostrokerisk")
 def nostroke():
     return render_template("index5.html")
 
-@app.route("/yesstroke")
+@app.route("/predictor/strokerisk")
 def yesstroke():
     return render_template("index6.html")
 
 @app.route("/retrieve", methods=['GET', 'POST'])
 def retrieve():
+
     if request.method == "POST":
         gender = request.form["gender"]
         age = request.form["age"]
@@ -44,12 +45,14 @@ def retrieve():
         residencetype = request.form["residencetype"]
         bmi = request.form["bmi"]
         smokingstatus = request.form["smokingstatus"]
+
         predictions = retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
         
         if predictions[0]==0:
-            return redirect("/nostroke")
+            return redirect("/predictor/nostrokerisk")
         else:
-            return redirect("/yesstroke")
+            return redirect("/predictor/strokerisk")
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('Port', 5000))
