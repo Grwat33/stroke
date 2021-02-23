@@ -24,11 +24,11 @@ def datainfo():
 def collaborators():
     return render_template("index4.html")
 
-@app.route("/predictor/nostrokerisk")
+@app.route("/nostrokerisk")
 def nostroke():
     return render_template("index5.html")
 
-@app.route("/predictor/strokerisk")
+@app.route("/strokerisk")
 def yesstroke():
     return render_template("index6.html")
 
@@ -49,9 +49,9 @@ def retrieve():
         predictions = retrievedata.entrylist(gender,age,hypertension,heartdisease,married,worktype,residencetype,bmi,smokingstatus)
         
         if predictions[0]==0:
-            return redirect("/predictor/nostrokerisk")
+            return redirect("/nostrokerisk")
         else:
-            return redirect("/predictor/strokerisk")
+            return redirect("/strokerisk")
 
 
 if __name__ == '__main__':
