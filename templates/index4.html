@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stroke Prediction model</title>
   <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -29,43 +28,91 @@
     crossorigin="anonymous"
   ></script>
   <script src="https://d3js.org/d3.v6.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
 </head>
-
-<body style="background-color:pink">
-  
-
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Stroke Prediction</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/predictor">Predict</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/graphs">Graphs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/datainfo">Dataset</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/collaborators">Collaborators</a>
-        </li>
-      </ul>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Stroke Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/predictor">Predict</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/graphs">Graphs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/datainfo">Dataset</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/collaborators">Collaborators</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!-- This is the container for the collaborators-->
+<div class="container">
+<div class="row">
+    <div class="col">
+      <div class="bg-image rounded-circle" id="Laurel">
+        <a href="https://www.linkedin.com/in/laurel-whitten-10828a4/">
+          <img src="collab/Laurel.png" alt="Laurel" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
     </div>
-  </nav>
-
-  <br>
-  <br>
-  <p style="margin-left:25%; width:50%;outline:auto;text-align:center;background-color: lightgrey;font-size: 300%;"><b>Collaborators</b></p>
-  <br>
-  <br>
-  <br>
-  <br>
-
+    <div class="col">
+      <div class="bg-image rounded-circle" id="Danielle">
+        <a href="https://www.linkedin.com/in/danielle-sledge-164b198b/">
+          <img src="collab/danielle.jpeg" alt="Danielle" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="bg-image rounded-circle" id="Robin">
+        <a href="http://www.linkedin.com/in/robin-khan-1578b553">
+          <img src="collab/robin.jpeg" alt="Robin" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bg-image rounded-circle" id="Garrett">
+        <a href="https://www.linkedin.com/in/grwatkins/">
+          <img src="collab/Garrett.jpeg" alt="Garett" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
+    </div>
+    <div class="col">
+        <div class="bg-image rounded-circle" id="Victoriya">
+          <a href="https://www.linkedin.com/in/viktoriyatkhoryk?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhvBHk81iRlKt1K9s%2BZLKSw%3D%3D">
+            <img src="collab/Viktoriya.jpeg" alt="Victoriya" class="rounded-circle" width="200px" height="200px">
+            <div class="overlay" ></div></a>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="bg-image rounded-circle" id="Ashwin">
+        <a href="https://www.linkedin.com/in/ashwin-p-24a142125/">
+          <img src="collab/Ashwin.jpeg" alt="Ashwin" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bg-image hover-overlay rounded-circle" id="Julia">
+        <a href="https://www.linkedin.com/in/juliashabow/">
+          <img src="collab/Julia.jpeg" alt="Julia" class="rounded-circle" width="200px" height="200px">
+          <div class="overlay" ></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
