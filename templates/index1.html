@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stroke Prediction Model</title>
+  <link rel="icon" href="https://cdn-prod.medicalnewstoday.com/content/images/articles/324/324998/vintage-illustration-of-a-brain.jpg">
   <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -63,7 +64,10 @@
 
   <br>
   <br>
-  <p style="margin-left:25%; width:50%;outline:auto;text-align:center;background-color: lightgrey;font-size: 300%;"><b>Stroke Prediction Input</b></p>
+  <img class = "align-middle" src="static/images/icon.png" style = "width:50%;margin-left:25%;outline:auto">
+  <br>
+  <br>
+  <br>
   <br>
   <form method="POST" action="/retrieve" style="margin-left:25%; width:50%;outline:auto;text-align: center;background-color: white;font-size: 120%;">
       <br>
@@ -108,8 +112,11 @@
             <option value="Rural">Rural</option>
         </select>
         <br>
-        <label for="bmi">BMI (If you need to calculate your BMI, scroll down):</label>
+        <label for="bmi">BMI:</label>
         <input id="bmi" type="float" class="count" name="bmi" value="30" min="0">
+        <br>
+        <br>
+        <iframe src="https://www.mealpro.net/bmi/" frameborder="0" width="575" height="360" style="max-width: 100%;"></iframe>
         <br>
         <label for="smokingstatus">Smoking Status:</label>
         <select id="smokingstatus" name="smokingstatus">
@@ -119,19 +126,12 @@
         </select>
         <br>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" style="background-color: pink;">
         <br>
         <br>
       </form>
     <br><br></p>
 <br><br>
-
-<p style="margin-left:25%; width:50%;outline:auto;text-align:center;background-color: lightgrey"><b>BMI For Adults Widget</b></p>
-      <br>
-      <iframe scrolling="no" height="395" frameborder="30" src="https://www.cdc.gov/healthyweight/assessing/adult-widget/iframe.html" title="Adult BMI (Body Mass Index) Calculator" style="margin-left:25%; width:50%;outline:auto;padding-left:20.5%;background-color: white;"  ></iframe>
-      <br>
-      <br>
-
 
     </body>
 </html>
